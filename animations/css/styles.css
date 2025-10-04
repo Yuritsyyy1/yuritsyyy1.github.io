@@ -6,19 +6,22 @@
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: centr center;
+    background-position: center center;
     width: 100vw;
     height: 100vh;
     position: relative;
 }
 #pj{
     position: absolute;
-    top: 150px;
-    left: 120px;
+    top: 125px;
+    left: 180px;
     width: 200px;
     height: 200px;
     animation-name: saltos;
-    animation-duration: 5s;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 10;
 }
 #barril1{
     position: absolute;
@@ -34,6 +37,7 @@
     top: 530px;
     left: 180px;
     transform: rotate(-20deg);
+    z-index: 15;
 }
 .girobarril{
     animation-name: rotarBarril;
@@ -52,17 +56,63 @@
 @keyframes saltos{
     0%{
         top: -150px;
+        left: 170px;
+        z-index: 10;
     }
-    30%{
-        top: 170px;
+    10%{
+        top: 125px;
+        left: 170px;
+        z-index: 10;
     }
-    60%{
-        left: 780px;
-        top: 280px;
+    25%{
+        top: 0px;
+        left: 450px;
+        z-index: 10;
+    }
+    40%{
+        top: 260px;
+        left: 800px;
+        z-index: 10;
+    }
+    55%{
+        top: 180px;
+        left: 650px;
+        z-index: 10;
+        opacity: 1;
+    }
+    70%{
+        top: 530px;
+        left: 180px;
+        z-index: 10;
+        transform: rotate(-20deg);
+        opacity: 1;
+
+
+    }
+    71%{
+        top: 530;
+        left: 180;
+        z-index: 10;
+        opacity: 0;
+
+    }
+    74%{
+        top: 530px;
+        left: 180px;
+        z-index: 10;
+        opacity: 0;
+    }
+    75.5%{
+        top: 500px;
+        left: 180px;
+        opacity: 1;
+        transform: rotate(0deg);
     }
     100%{
-        left: 200px;
-        top: 500px;
-
+        top: -500px;
+        left: 350px;
+        transform: rotate(720deg);
+        z-index: 20;
+        opacity: 1;
     }
 }
